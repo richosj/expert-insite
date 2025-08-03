@@ -1,0 +1,28 @@
+<header class="header" id="header">
+    <div class="header-container">
+        <div class="header-logo">
+            <a href="/"></a>
+        </div>
+        <nav class="header-nav">
+            <ul>
+                <li><a href="#">서비스</a></li>
+                <li><a href="#">인사이트</a></li>
+                <li><a href="#">포트폴리오</a></li>
+                <li><a href="#">회사소개</a></li>
+            </ul>
+        </nav>
+
+        <div class="hamburger" id="hamburger">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+          </div>
+        
+    </div>
+</header>
+<script>
+    const hamburger = document.getElementById('hamburger');
+    hamburger.addEventListener('click', () => {
+    hamburger.classList.toggle('active');
+    });
+</script>
