@@ -1,0 +1,282 @@
+@use "../abstracts/variables" as *;
+@use "../abstracts/functions" as *;
+@use "../abstracts/mixins" as *;
+
+
+.home-visual{
+    height: 100dvh;
+    position: relative;
+    .swiper-slide{
+        height: 100dvh;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100vw;
+    }
+}
+.slide-content{
+    position: absolute;
+    top: 50rem;
+    left: 5rem;
+    color: #fff;
+    .slide-text{
+        font-size: 6rem;
+        font-weight: 300;
+        letter-spacing: -0.02em;
+        line-height: 7.4rem;
+        b{
+            font-weight: 700;
+        };
+    }
+}
+
+.home-consulting{
+    padding-top: 25rem;
+    .title{
+        text-align: center;
+        font-weight: 600;
+        font-size: 6rem;
+        line-height: 72px;
+        color: #222;
+        margin-bottom: 7.2rem;   
+    }
+    .desc{
+        text-align: center;
+        color: #BCBCBC;
+        font-size: 2rem;
+        line-height: 30px;
+        margin-bottom: 4rem;
+    }
+}
+
+.question-box{
+    width: 91rem;
+    background-color: #F1F6FD;
+    padding: 6.2rem 0;
+    margin: 0 auto;
+    .question-title{
+        display: flex;
+        gap: 1.3rem;
+        justify-content: center;
+        span{
+            font-weight: 500;
+            font-size: 1.4rem;
+            background-color: #fff;
+            color: #000;
+            border-radius: .5rem;
+            padding: .8rem;
+            display: inline-block;
+            vertical-align: top;
+            em{
+                font-weight: 700;
+                font-style: normal;
+            }
+        }
+        b{
+            color: #1428A0;
+            font-weight: 700;
+            font-size: 2.6rem;
+        }
+    }
+}
+.question-select{
+    text-align: center;
+    margin-bottom: .8rem;
+    em{
+        font-size: 2rem;
+        line-height: 30px;
+        font-weight: 400;
+        color:#BCBCBC;
+        padding-right: 1rem;
+        font-style: normal;
+    }
+    .select-text{
+        font-weight: 600;
+        color: #fff;
+        padding: .7rem 2rem;
+        background-color: #0094FF;
+        border: 1px solid #0094FF;
+        border-radius: 50px;
+        font-size: 20px;
+        white-space: nowrap;
+    }
+}
+.question-list{
+    display: flex;
+    justify-content: center;
+    padding-top: 3rem;
+    gap: 1.2rem;
+    .question-item{
+        color: #686876;
+        padding: .7rem 2rem;
+        background-color: #fff;
+        border: 1px solid #0094FF;
+        border-radius: 50px;
+        font-size: 20px;
+        white-space: nowrap;
+        cursor: pointer;
+        &.active{
+            color: #fff;
+            background-color: #0094FF;
+            font-weight: 600;
+        }
+    }
+}
+.next{
+    text-align: center;
+    padding-top: 3rem;
+}
+
+.home-solution{
+    background: url('@/assets/images/bg-solution.png') no-repeat center 0 / cover;
+    height: 937px;
+    padding-top: 173px;
+    margin-top: 6.5rem;
+    .title{
+        font-weight: 300;
+        font-size: 6rem;
+        b{
+            font-weight: 600;
+
+        }
+    }
+    .desc{
+        color: #686876;
+        font-size: 2.6rem;
+        margin-top: 2.6rem;
+    }
+}
+.solution-list{
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap:0 5rem;
+    margin-top: 6rem;
+}
+.solution-item{
+    background-color:#E8E8E8;
+    a{
+        display: block;
+        padding: 4.5rem 3.4rem 10.2rem;
+        .img-box{
+            img{
+                width: 100%;
+                object-fit: cover;
+            }
+        }
+        .text-box{
+            .title-box{
+                font-size:3.6rem;
+                font-weight: 700;
+                color: #222;
+                small{
+                    font-size: 1.8rem;
+                    font-weight: 300;
+                    padding-left: .6rem;
+                }
+            }
+            .desc-box{
+                font-size: 2rem;
+                font-weight: 600;
+                color: #222;
+                margin-top: 1rem;
+            }
+        }
+    }
+}
+
+.home-titles{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    b{
+        font-weight: 600;
+        font-size: 6rem;
+        color: #000;
+    }
+    .btn-more{
+        font-size: 1.6rem;
+        font-weight: 600;
+        color: #222;
+        display: inline-flex;
+        vertical-align: top;
+        gap: 0 1rem;
+        align-items: center;
+        i{
+            vertical-align: top;
+            display: inline-block;
+            width: 3.5rem;
+            height: 3.5rem;
+            background: url('@/assets/images/more.png') no-repeat center center;
+        }
+    }
+}
+
+.home-portfolio{
+    padding-top: 30rem;
+}
+
+.home-insite{
+    padding-top: 25rem;
+    padding-bottom: 28rem;
+}
+.insite-list{
+    display: flex;
+    gap:0 8%;
+    margin-top: 5.5rem;
+    .lg{
+        width: 47.5%;
+        .insite-item{
+            a{
+                display: block;
+            }
+            .text-box{
+                padding: 3.5rem 0 0 1.5rem;
+                .subject{
+                    color: #000;
+                    font-size: 3.4rem;
+                    font-weight: 600;
+                }
+                .desc{
+                    color: #959595;
+                    font-size: 1.4rem;
+                    line-height: 100%;
+                    margin-top: 1rem;
+                }
+                .icon{
+                    text-align: right;
+                }
+            }
+        }
+    }
+    .sm{
+        flex: 1;
+        .insite-item{
+            margin-bottom: 4rem;
+            padding-bottom: 4rem;
+            border-bottom: 2px solid #ddd;
+            &:last-child{
+                margin-bottom: 0;
+                padding-bottom: 0;
+                border-bottom: none;
+            }
+            a{
+                display: flex;
+                align-items: flex-start;
+                gap:0 4rem;
+            }
+            
+            .text-box{
+                .subject{
+                    color: #000;
+                    font-size: 2.2rem;
+                    font-weight: 400;
+                }
+                .desc{
+                    color: #959595;
+                    font-size: 1.2rem;
+                    margin-top: 1rem;
+                }
+            }
+        }
+    }
+}
