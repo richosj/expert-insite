@@ -18,13 +18,11 @@
 </head>
 
 <body>
-    <div id="wrap">
+    <div id="wrap" class="home">
         <header class="header" id="header">
             <div class="header-container">
                 <div class="header-logo">
-                    <a href="/">
-                        <img src="./assets/images/logo.png" alt="logo">
-                    </a>
+                    <a href="/"></a>
                 </div>
                 <nav class="header-nav">
                     <ul>
@@ -34,11 +32,22 @@
                         <li><a href="#">회사소개</a></li>
                     </ul>
                 </nav>
+        
+                <div class="hamburger" id="hamburger">
+                    <span class="line line1"></span>
+                    <span class="line line2"></span>
+                    <span class="line line3"></span>
+                  </div>
+                
             </div>
         </header>
-        <!-- /header -->
+        <script>
+            const hamburger = document.getElementById('hamburger');
+            hamburger.addEventListener('click', () => {
+            hamburger.classList.toggle('active');
+            });
+        </script>        <!-- /header -->
         <main class="main">
-            
             <div class="home-visual">
                 <div class="swiper visual-swiper">
                     <div class="swiper-wrapper">
@@ -49,17 +58,20 @@
                 </div>
 
                 <div class="slide-content">
-                    <div>
+                    <div class="control-box">
                         <span>1</span>
+                        <div class="line"></div>
                         <span>2</span>
                         <span>3</span>
                         <button class="btn-control"></button>
                     </div>
 
                     <div class="slide-text">
-                        고객의 지속가능한<br>
-                        <b>성장을 실현하고,</b><br>
-                        <b>탁월한 성과를 창출합니다.</b>
+                        <div class="text-box" id="textBox">
+                            고객의 지속가능한<br>
+                            <b>성장을 실현하고,</b><br>
+                            <b>탁월한 성과를 창출합니다.</b>
+                        </div>
                     </div>
 
                 </div>
@@ -71,9 +83,10 @@
                 <div class="title">
                     BX컨설팅은 조직의 <br>탁월한 목표를 함께 만들어 갑니다.
                 </div>
-                <div class="desc">아래 두 질문에 답하여 주시면, 귀하의 컨설팅 니즈에 대한 BX의 솔루션을 확인할 수 있습니다.</div>
-
                 
+
+                <div class="desc">아래 두 질문에 답하여 주시면, <br class="mobile-block">귀하의 컨설팅 니즈에 대한 BX의 솔루션을 확인할 수 있습니다.</div>
+
                 <div class="question-select">
                     <em>선택:</em> <span class="select-text">제조</span>
                 </div>
@@ -95,6 +108,53 @@
                     </div>
                 </div>
 
+                <div class="container consulting-container">
+                    <div class="title">
+                        <b>금융서비스</b>를 귀하의 <br class="mobile-block">산업으로 선택하셨습니다. <br>
+                        <b>고객경험</b>을 비즈니스 니즈로 <br class="mobile-block">선택하셨습니다.
+                    </div>
+    
+                    <div class="consulting-result">
+                        <strong>추천 솔루션</strong>
+                        <button class="btn-recheck"><i><img src="./assets/images/nrk_back.png" alt=""></i>재검색하기</button>
+                    </div>
+    
+                    <div class="consulting-list">
+                        <div class="consulting-item">
+                            <strong>고객경험관리 <em>(CXM)</em></strong>
+                            <div class="text1">고객경험은 전략이다.</div>
+                            <div class="text2">
+                                전사 관점에서 고객경험을 설계하고 운영 체계를 정립합니다.
+                            </div>
+                            <div class="link"><img src="./assets/images/tabler_arrow-move-right3.png" alt=""></div>
+                        </div>
+                        <div class="consulting-item">
+                            <strong>고객경험관리 <em>(CXM)</em></strong>
+                            <div class="text1">고객경험은 전략이다.</div>
+                            <div class="text2">
+                                전사 관점에서 고객경험을 설계하고 운영 체계를 정립합니다.
+                            </div>
+                            <div class="link"><img src="./assets/images/tabler_arrow-move-right3.png" alt=""></div>
+                        </div>
+                        <div class="consulting-item">
+                            <strong>고객경험관리 <em>(CXM)</em></strong>
+                            <div class="text1">고객경험은 전략이다.</div>
+                            <div class="text2">
+                                전사 관점에서 고객경험을 설계하고 운영 체계를 정립합니다.
+                            </div>
+                            <div class="link"><img src="./assets/images/tabler_arrow-move-right3.png" alt=""></div>
+                        </div>
+                        <div class="consulting-item">
+                            <strong>고객경험관리 <em>(CXM)</em></strong>
+                            <div class="text1">고객경험은 전략이다.</div>
+                            <div class="text2">
+                                전사 관점에서 고객경험을 설계하고 운영 체계를 정립합니다.
+                            </div>
+                            <div class="link"><img src="./assets/images/tabler_arrow-move-right3.png" alt=""></div>
+                        </div>
+                    </div>
+                </div>
+
 
             </div>
             <!-- /home-consulting -->
@@ -103,7 +163,7 @@
                 <div class="container">
                     <div class="title">
                         미래 변화의 핵심, <b>ABCD X</b><br>
-                        <b>지금 바로 비엑스컨설팅과 시작하세요!</b>
+                        <b>지금 바로 비엑스컨설팅과 <br class="mobile-block">시작하세요!</b>
                     </div>
                     <div class="desc">
                         AI, 비즈니스 모델, 고객 경험, 디지털 전환을 아우르는 통합적 전략으로 지속 가능한 성장을 설계합니다.
@@ -167,6 +227,173 @@
                         <b>포트폴리오</b>
                         <a href="#" class="btn-more">View More <i></i></a>
                     </div>
+
+                    <div class="portfolio-list">
+                        <div class="portfolio-item">
+                            <div class="icon"><img src="./assets/images/portfolio-1.png" alt=""></div>
+                            <div class="cont">
+                                <div class="titles">
+                                    <div class="cate">
+                                        <span>은행</span>
+                                        <span>CX/영업&마케팅</span>
+                                    </div>
+                                    <strong>대면채널경쟁력 강화를 위한 <br>역량모델링 및 상담프로세스 <br>재정립</strong>
+                                </div>
+                                <div class="more-btn">
+                                    <img src="./assets/images/tabler_arrow-move-right.png" alt="">
+                                </div>
+                                <div class="list-grid">
+                                    <div class="item">
+                                        <strong>Pain Points</strong>
+                                        <ul>
+                                            <li>유지회선 수 정체</li>
+                                            <li>영업채널별 신규회선 유치 저조</li>
+                                            <li>이탈회선 관리 방향성 부재</li>
+                                        </ul>
+                                    </div>
+                                    <div class="item">
+                                        <strong>수행내용</strong>
+                                        <ul>
+                                            <li>대내외 Data 분석을 통한 현황 분석</li>
+                                            <li>고객 페르소나 및 USP 정립을 통한 채널별 전략수립</li>
+                                            <li>채널별 세일즈 및 마케팅 스크립트 구성</li>
+                                        </ul>
+                                    </div>
+                                    <div class="item full">
+                                        <strong>기대효과</strong>
+                                        <ul>
+                                            <li>가입절차 단계 이탈율 개선</li>
+                                            <li>요금제별 이탈패턴 기반 리텐션 전략 운영</li>
+                                            <li>영업채널별 명확한 타겟고객 설정 및 세일즈 전략 운영</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-item active">
+                            <div class="icon"><img src="./assets/images/portfolio-1.png" alt=""></div>
+                            <div class="cont">
+                                <div class="titles">
+                                    <div class="cate">
+                                        <span>통신</span>
+                                        <span>영업/마케팅</span>
+                                    </div>
+                                    <strong>통신회선 수 확대를 위한 고객 <br>페르소나 정립 및 온라인 마케팅 전략 컨설팅</strong>
+                                </div>
+                                <div class="more-btn">
+                                    <img src="./assets/images/tabler_arrow-move-right.png" alt="">
+                                </div>
+                                <div class="list-grid">
+                                    <div class="item">
+                                        <strong>Pain Points</strong>
+                                        <ul>
+                                            <li>유지회선 수 정체</li>
+                                            <li>영업채널별 신규회선 유치 저조</li>
+                                            <li>이탈회선 관리 방향성 부재</li>
+                                        </ul>
+                                    </div>
+                                    <div class="item">
+                                        <strong>수행내용</strong>
+                                        <ul>
+                                            <li>대내외 Data 분석을 통한 현황 분석</li>
+                                            <li>고객 페르소나 및 USP 정립을 통한 채널별 전략수립</li>
+                                            <li>채널별 세일즈 및 마케팅 스크립트 구성</li>
+                                        </ul>
+                                    </div>
+                                    <div class="item full">
+                                        <strong>기대효과</strong>
+                                        <ul>
+                                            <li>가입절차 단계 이탈율 개선</li>
+                                            <li>요금제별 이탈패턴 기반 리텐션 전략 운영</li>
+                                            <li>영업채널별 명확한 타겟고객 설정 및 세일즈 전략 운영</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-item">
+                            <div class="icon"><img src="./assets/images/portfolio-3.png" alt=""></div>
+                            <div class="cont">
+                                <div class="titles">
+                                    <div class="cate">
+                                        <span>교통</span>
+                                        <span>CX</span>
+                                    </div>
+                                    <strong>고객만족도 향상을 위한 <br>넛지서비스 컨설팅</strong>
+                                </div>
+                                <div class="more-btn">
+                                    <img src="./assets/images/tabler_arrow-move-right.png" alt="">
+                                </div>
+                                <div class="list-grid">
+                                    <div class="item">
+                                        <strong>Pain Points</strong>
+                                        <ul>
+                                            <li>유지회선 수 정체</li>
+                                            <li>영업채널별 신규회선 유치 저조</li>
+                                            <li>이탈회선 관리 방향성 부재</li>
+                                        </ul>
+                                    </div>
+                                    <div class="item">
+                                        <strong>수행내용</strong>
+                                        <ul>
+                                            <li>대내외 Data 분석을 통한 현황 분석</li>
+                                            <li>고객 페르소나 및 USP 정립을 통한 채널별 전략수립</li>
+                                            <li>채널별 세일즈 및 마케팅 스크립트 구성</li>
+                                        </ul>
+                                    </div>
+                                    <div class="item full">
+                                        <strong>기대효과</strong>
+                                        <ul>
+                                            <li>가입절차 단계 이탈율 개선</li>
+                                            <li>요금제별 이탈패턴 기반 리텐션 전략 운영</li>
+                                            <li>영업채널별 명확한 타겟고객 설정 및 세일즈 전략 운영</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="portfolio-item">
+                            <div class="icon"><img src="./assets/images/portfolio-4.png" alt=""></div>
+                            <div class="cont">
+                                <div class="titles">
+                                    <div class="cate">
+                                        <span>호텔&리조트</span>
+                                        <span>CX/영업&마케팅</span>
+                                    </div>
+                                    <strong>웰니스 관점의 고급화된 Pool <br>& SPA 멤버십 상품개발</strong>
+                                </div>
+                                <div class="more-btn">
+                                    <img src="./assets/images/tabler_arrow-move-right.png" alt="">
+                                </div>
+                                <div class="list-grid">
+                                    <div class="item">
+                                        <strong>Pain Points</strong>
+                                        <ul>
+                                            <li>유지회선 수 정체</li>
+                                            <li>영업채널별 신규회선 유치 저조</li>
+                                            <li>이탈회선 관리 방향성 부재</li>
+                                        </ul>
+                                    </div>
+                                    <div class="item">
+                                        <strong>수행내용</strong>
+                                        <ul>
+                                            <li>대내외 Data 분석을 통한 현황 분석</li>
+                                            <li>고객 페르소나 및 USP 정립을 통한 채널별 전략수립</li>
+                                            <li>채널별 세일즈 및 마케팅 스크립트 구성</li>
+                                        </ul>
+                                    </div>
+                                    <div class="item full">
+                                        <strong>기대효과</strong>
+                                        <ul>
+                                            <li>가입절차 단계 이탈율 개선</li>
+                                            <li>요금제별 이탈패턴 기반 리텐션 전략 운영</li>
+                                            <li>영업채널별 명확한 타겟고객 설정 및 세일즈 전략 운영</li>
+                                        </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                     
                 </div>
 
@@ -180,9 +407,9 @@
                         <a href="#" class="btn-more">View More <i></i></a>
                     </div>
 
-                    <div class="insite-list">
+                    <div class="insite-lists">
                         <div class="lg">
-                            <div class="insite-item">
+                            <div class="insites-item">
                                 <a href="#">
                                     <div class="img-box"><img src="./assets/images/insite-lg-thumb1.png" alt=""></div>
                                     <div class="text-box">
@@ -198,7 +425,7 @@
                             </div>
                         </div>
                         <div class="sm">
-                            <div class="insite-item">
+                            <div class="insites-item">
                                 <a href="#">
                                     <div class="img-box"><img src="./assets/images/insite-lg-thumb2.png" alt=""></div>
                                     <div class="text-box">
@@ -207,7 +434,7 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class="insite-item">
+                            <div class="insites-item">
                                 <a href="#">
                                     <div class="img-box"><img src="./assets/images/insite-lg-thumb3.png" alt=""></div>
                                     <div class="text-box">
@@ -216,7 +443,7 @@
                                     </div>
                                 </a>
                             </div>
-                            <div class="insite-item">
+                            <div class="insites-item">
                                 <a href="#">
                                     <div class="img-box"><img src="./assets/images/insite-lg-thumb4.png" alt=""></div>
                                     <div class="text-box">
@@ -237,8 +464,8 @@
                 <div class="title">Contact Us</div>
                 <div class="box">
                     <div class="desc">
-                        지금 고민하고 있는 문제를 <br>
-                        당신의 든든한 파트너인 비엑스컨설팅과 상의하세요.
+                        <span>지금 고민하고 있는 문제를</span> <br>
+                        당신의 든든한 파트너인 <br class="mobile-block">비엑스컨설팅과 상의하세요.
                     </div>
                     <button class="btn-contact">문의하기</button>
                 </div>
@@ -250,8 +477,8 @@
                 <div class="footer-logo"></div>
                 <div class="grid">
                     <div class="l-cont">
-                        대표: 박준호   주소: 서울특별시 송파구 중대로 121, 2층(가락동, 롯데캐슬파인힐) <br>
-                        <b>Tel:</b> <a href="tel:02-2152-3843">02-2152-3843</a> / <b>Fax:</b> 02-538-6996 / <a href="mailto:contact@bxcon.co.kr">contact@bxcon.co.kr</a>
+                        대표: 박준호 <br class="mobile-block">주소: 서울특별시 송파구 중대로 121, 2층(가락동, 롯데캐슬파인힐) <br>
+                        <b>Tel:</b> <a href="tel:02-2152-3843">02-2152-3843</a> / <b>Fax:</b> 02-538-6996 <br class="mobile-block">/ <a href="mailto:contact@bxcon.co.kr">contact@bxcon.co.kr</a>
                     </div>
                     <div class="r-cont">
                         <a href="#">개인정보처리방침</a>
@@ -262,13 +489,116 @@
         </footer>
         
     </div>
+
+    <div class="popup-overlay">
+        <div class="popup">
+          <div class="close-btn"><img src="./assets/images/close.png" alt=""></div>
+          <h2>Contact US
+            <p class="desc">고민하고 있는 문제를 당신의 든든한 파트너인 비엑스컨설팅과 상의하세요.</p>
+          </h2>
+          
+          <form>
+            <div class="form-wrap">
+                <div class="form-left">
+                    <div class="form-col">
+                        <label>문의타입<span >*</span></label>
+                        <div class="radio-group">
+                        <label><input type="radio" name="type" /> 컨설팅</label>
+                        <label><input type="radio" name="type" checked /> 기타</label>
+                        </div>
+                    </div>
+                    <div class="form-col v2">
+                        <label>직책명</label>
+                        <input type="text" />
+                    </div>
+                    <div class="form-col">
+                        <label>이메일주소<span >*</span></label>
+                        <input type="email" />
+                    </div>
+                    <div class="form-col">
+                        <label>회사/기관명<span >*</span></label>
+                        <input type="text" />
+                    </div>
+                </div>
+                <div class="form-right">
+                <div class="form-col">
+                    <label>컨설팅분야<span >*</span></label>
+                    <select>
+                    <option>- 선택 -</option>
+                    </select>
+                </div>
+                <div class="form-col">
+                    <label>문의내용<span >*</span></label>
+                    <textarea placeholder="궁금하신 사항을 작성해주세요."></textarea>
+                </div>
+                </div>
+            </div>
+            
+            <div class="form-row">
+              <label class="agree"><input type="checkbox" /> 개인정보 보호정책에 동의합니다<span >*</span></label>
+            </div>
+            <button class="btn" type="submit">문의 등록하기</button>
+          </form>
+        </div>
+      </div>
+      
+      
     <script>
+
+        
+
+        document.querySelector('.close-btn').addEventListener('click', () => {
+            document.querySelector('.popup-overlay').classList.remove('active');
+        });
+
+        document.querySelector('.btn-contact').addEventListener('click', () => {
+            document.querySelector('.popup-overlay').classList.add('active');
+        });
+   
+        const header = document.querySelector('header');
+        const visual = document.querySelector('.home-visual');
+      
+        window.addEventListener('scroll', () => {
+          const visualBottom = visual.getBoundingClientRect().bottom;
+      
+          if (visualBottom <= 100) {
+            header.classList.add('down');
+          } else {
+            header.classList.remove('down');
+          }
+        });
+
+        const items = document.querySelectorAll('.question-item');
+        const selectText = document.querySelector('.select-text');
+
+        items.forEach(item => {
+        item.addEventListener('click', () => {
+            items.forEach(el => el.classList.remove('active'));
+            item.classList.add('active');
+            selectText.textContent = item.textContent;
+            document.querySelector('.question-select').classList.add('active');
+        });
+        });
+
+   
         const visualSwiper = new Swiper('.visual-swiper', {
             loop: true,
             autoplay: {
                 delay: 3000,
                 disableOnInteraction: false,
             },
+            on: {
+                slideChange: function(){
+                    const texts = [
+                    `고객의 지속가능한<br><b>성장을 실현하고,</b><br><b>탁월한 성과를 창출합니다.</b>`,
+                    `데이터와 통찰로<br><b>사람 중심의 경험을 전략화합니다.</b>`,
+                    `경험에서 전략을, <br><b>전략에서 성장을 만듭니다.</b>`
+                    ];
+
+                    document.querySelector('#textBox').innerHTML = texts[this.activeIndex];
+
+                }
+            }
         });
     </script>
 </body>
