@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>상품주문 반려 & 로그인</title>
+  <style>
+    /* RESET */
+    * {margin: 0; padding: 0; box-sizing: border-box;}
+    html, body {width: 100%; font-family: sans-serif; background: #f8f8f8; color: #000;}
+    input, button, textarea {font-family: inherit; font-size: inherit; border: none; outline: none;}
+    ul, li {list-style: none;}
+
+    /* Layout */
+    .wrap {padding: 2rem; max-width: 500px; margin: 0 auto; background: #fff;}
+
+    .return-box {
+      border: 1px solid #0066cc;
+      padding: 1.5rem;
+      margin-bottom: 2rem;
+    }
+
+    .return-box + .return-box {
+      margin-top: 1rem;
+    }
+
+    .title-area {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      font-weight: bold;
+      margin-bottom: 1.5rem;
+    }
+
+    .return-info {
+      font-size: 1.4rem;
+      line-height: 1.8;
+    }
+
+    .summary {
+      text-align: center;
+      padding: 1rem;
+      background: #f1f1f1;
+      font-size: 1.4rem;
+    }
+
+    .summary b {
+      font-weight: bold;
+    }
+
+    .summary .highlight {
+      color: red;
+      font-weight: bold;
+      font-size: 1.6rem;
+    }
+
+    .reason-box {
+      margin: 2rem 0;
+    }
+
+    textarea {
+      width: 100%;
+      height: 80px;
+      border: 1px solid #ccc;
+      padding: 0.8rem;
+      resize: none;
+    }
+
+    .btn-return {
+      width: 100%;
+      border: 1px solid red;
+      color: red;
+      padding: 1rem;
+      background: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    /* 로그인 */
+    .login-wrap {
+      background: #092d60;
+      color: #fff;
+      padding: 4rem 2rem;
+      min-height: 100vh;
+    }
+
+    .login-logo {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 4rem;
+    }
+
+    .login-form {
+      background: #fff;
+      color: #000;
+      border-radius: 8px;
+      padding: 2rem;
+    }
+
+    .login-form input {
+      display: block;
+      width: 100%;
+      border: 1px solid #ccc;
+      margin-bottom: 1.5rem;
+      padding: 1rem;
+    }
+
+    .login-form button {
+      display: block;
+      width: 100%;
+      padding: 1rem;
+      background: #0051cc;
+      color: #fff;
+      font-weight: bold;
+      cursor: pointer;
+      border-radius: 4px;
+    }
+
+    .login-notice {
+      color: #fff;
+      margin-top: 2rem;
+      font-size: 1.2rem;
+    }
+  </style>
+</head>
+<body>
+
+<!-- 반려 페이지 -->
+<div class="wrap">
+  <div class="title-area">
+    <div>상품주문 반려</div>
+    <div style="color: #0066cc; font-weight: bold;">구매번호 2506-E-0001</div>
+  </div>
+
+  <div class="return-box">
+    <div class="return-info">
+      고객분류: 시약/임상병리<br>
+      상품번호: cau-526<br>
+      상품명: Bim<br>
+      규격: 200ug<br>
+      재고: 1<br>
+      주문수량: 1<br>
+      소비자가: 208,000원
+    </div>
+  </div>
+  <div class="return-box">
+    <div class="return-info">
+      고객분류: 시약/임상병리<br>
+      상품번호: cau-526<br>
+      상품명: Bim<br>
+      규격: 200ug<br>
+      재고: 1<br>
+      주문수량: 1<br>
+      소비자가: 208,000원
+    </div>
+  </div>
+  <div class="return-box">
+    <div class="return-info">
+      고객분류: 시약/임상병리<br>
+      상품번호: cau-526<br>
+      상품명: Bim<br>
+      규격: 200ug<br>
+      재고: 1<br>
+      주문수량: 1<br>
+      소비자가: 208,000원
+    </div>
+  </div>
+
+  <div class="summary">
+    총 상품수 <b>3개</b><br>
+    총 상품금액 <span class="highlight">1,230,000원</span>
+  </div>
+
+  <div class="reason-box">
+    <label for="reason">반려사유</label>
+    <textarea id="reason"></textarea>
+  </div>
+
+  <button class="btn-return">반려</button>
+</div>
+
+<!-- 로그인 페이지 -->
+<div class="login-wrap">
+  <div class="login-logo">KP&amp;T Technology<br>Log-in</div>
+  <div class="login-form">
+    <input type="text" placeholder="아이디">
+    <input type="password" placeholder="비밀번호">
+    <button>Log in</button>
+  </div>
+  <div class="login-notice">
+    비밀번호 연속 5회 오류시 로그인 이용이 제한됩니다.
+  </div>
+</div>
+
+</body>
+</html>

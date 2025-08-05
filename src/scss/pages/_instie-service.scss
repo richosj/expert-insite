@@ -68,6 +68,7 @@
 
             }
             span{background-color: #fff;padding-right: 12.5rem;height: 3.3rem;display: inline-flex;align-items: center;z-index: 2;position: relative;
+                background: #fff url('@/assets/images/rect.png') no-repeat right center;
                 @media (max-width: 1440px) {
                     padding-right: 10rem;
                 }

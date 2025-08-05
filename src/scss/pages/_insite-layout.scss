@@ -162,6 +162,12 @@
     justify-content: center;
     margin-top: 10rem;
     margin-bottom: 7rem;
+    &.bg1{
+        background-image: url('@/assets/images/insight_visual.png');
+    }
+    &.bg2{
+        background-image: url('@/assets/images/service_visual.png');
+    }
     @media (max-width: 1440px) {
         margin-top: 5rem;
         margin-bottom: 5rem;
@@ -447,7 +453,7 @@
         margin-bottom: 1rem;
     }
     &.v2{
-        padding-top: 2.2rem;
+        padding-top: 3.2rem;
         @media (max-width: 1000px) {
             padding-top: 0;
         }
@@ -500,8 +506,56 @@
         gap: 1rem;
     }
   }
+  .radio-group label{
+    margin-bottom: 0;
+    position: relative;
+    display: inline-flex;
+    vertical-align: top;
+    font-size: 1.8rem;
+    font-weight: 500;
+    align-items: center;
+    &::before{
+        content: '';
+        display: inline-block;
+        vertical-align: top;
+        top: 0;
+        left: 0;
+        width: 2rem;
+        height: 2rem;
+        border: 1px solid #757575;
+        box-sizing: border-box;
+        border-radius: 50%;
+        margin-right: .7rem;
+    }
+    &::after{
+        content: '';
+        position: absolute;
+        top: 6px;
+        left: 4px;
+        width: 1.2rem;
+        height: 1.2rem;
+        border-radius: 50%;
+        background-color: #0094FF;
+        opacity: 0;
+        transition: all 0.3s ease;
+    }
+    &:has(input:checked){
+        &::before{
+            border-color: #0094FF;
+        }
+        &::after{
+            opacity: 1;
+        }
+    }
+  }
   .radio-group input {
-    margin-right: 5px;
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
     @media (max-width: 1000px) {
         margin-right: 0;
     }
@@ -514,6 +568,10 @@
   }
   .agree {
     font-size: 18px;
+    display: inline-flex;
+    vertical-align: top;
+    align-items: center;
+    gap:0 1rem;
     @media (max-width: 1000px) {
         font-size: 1.2rem;
     }
@@ -523,6 +581,46 @@
         @media (max-width: 1000px) {
             width: 1.5rem;
             height: 1.5rem;
+        }
+    }
+  }
+  .form-row.flex{
+    align-items: center;
+    gap:0 2rem;
+    display: flex;
+  }
+  .btn-agree-view{
+    font-size: 1.2rem;
+    color: #929292;
+    padding-right: 18px;
+    background: url('@/assets/images/down.png') no-repeat right center;
+  }
+  .aree-cont{
+    background: rgba(217, 217, 217, 0.3);
+    padding: 12px 25px;
+    max-width: 670px;
+    display: none;
+    &.active{
+        display: block;
+    }
+    strong{
+        display: block;
+        font-size: 1.2rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+    }
+    table{
+        width: 100%;
+        border-collapse: collapse;
+        border-spacing: 0;
+        border-top: 1px solid rgba(217, 217, 217, 1);
+        background-color: #fff;
+        th,td{
+            border-bottom: 1px solid rgba(217, 217, 217, 1);
+            font-weight: 500;
+            text-align: center;
+            font-size: 1.2rem;
+            padding: 4px 0;
         }
     }
   }
