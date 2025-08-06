@@ -1,7 +1,12 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/functions" as *;
 @use "../abstracts/mixins" as *;
-
+.main:has(.insite-detail){
+    padding-bottom: 8rem;
+    @media (max-width: 768px) {
+        padding-bottom: 4rem;
+    }
+}
 .insite-detail{
     max-width: 1350px;
     margin: 0 auto;

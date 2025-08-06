@@ -2,7 +2,12 @@
 @use "../abstracts/functions" as *;
 @use "../abstracts/mixins" as *;
 
-
+.main:has(.service){
+    padding-bottom: 8rem;
+    @media (max-width: 768px) {
+        padding-bottom: 4rem;
+    }
+}
 .service{
     .service-title{
         text-align: center;
