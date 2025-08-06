@@ -217,7 +217,7 @@
                                     </div>
                                     <strong>대면채널경쟁력 강화를 위한 <br>역량모델링 및 상담프로세스 <br>재정립</strong>
                                 </div>
-                                <div class="more-btn">
+                                <div class="more-btn" data-url="/portfolio/portfolio-detail.html">
                                     <img src="/assets/images/tabler_arrow-move-right2.png" alt="">
                                 </div>
                                 <div class="list-grid">
@@ -258,7 +258,7 @@
                                     </div>
                                     <strong>통신회선 수 확대를 위한 고객 <br>페르소나 정립 및 온라인 마케팅 전략 컨설팅</strong>
                                 </div>
-                                <div class="more-btn">
+                                <div class="more-btn" data-url="12-인사이트-서비스.html">
                                     <img src="/assets/images/tabler_arrow-move-right2.png" alt="">
                                 </div>
                                 <div class="list-grid">
@@ -299,7 +299,7 @@
                                     </div>
                                     <strong>고객만족도 향상을 위한 <br>넛지서비스 컨설팅</strong>
                                 </div>
-                                <div class="more-btn">
+                                <div class="more-btn" data-url="12-인사이트-서비스.html">
                                     <img src="/assets/images/tabler_arrow-move-right2.png" alt="">
                                 </div>
                                 <div class="list-grid">
@@ -340,7 +340,7 @@
                                     </div>
                                     <strong>웰니스 관점의 고급화된 Pool <br>& SPA 멤버십 상품개발</strong>
                                 </div>
-                                <div class="more-btn">
+                                <div class="more-btn" data-url="12-인사이트-서비스.html">
                                     <img src="/assets/images/tabler_arrow-move-right2.png" alt="">
                                 </div>
                                 <div class="list-grid">
@@ -380,16 +380,20 @@
 
             <div class="home-client">
                 <div class="container">
-                    <div class="client-item"><img src="/assets/images/client.png" alt=""></div>
-                    <div class="client-item"><img src="/assets/images/client.png" alt=""></div>
-                    <div class="client-item"><img src="/assets/images/client.png" alt=""></div>
-                    <div class="client-item"><img src="/assets/images/client.png" alt=""></div>
-                    <div class="client-item"><img src="/assets/images/client.png" alt=""></div>
-                    <div class="client-item"><img src="/assets/images/client.png" alt=""></div>
-                    <div class="client-item"><img src="/assets/images/client.png" alt=""></div>
-                    <div class="client-item"><img src="/assets/images/client.png" alt=""></div>
-                    <div class="client-item"><img src="/assets/images/client.png" alt=""></div>
-                    <div class="client-item"><img src="/assets/images/client.png" alt=""></div>
+                    <div class="client-item"><img src="/assets/images/custom_logo_01.jpg" alt=""></div>
+                    <div class="client-item"><img src="/assets/images/custom_logo_02.jpg" alt=""></div>
+                    <div class="client-item"><img src="/assets/images/custom_logo_03.jpg" alt=""></div>
+                    <div class="client-item"><img src="/assets/images/custom_logo_04.jpg" alt=""></div>
+                    <div class="client-item"><img src="/assets/images/custom_logo_05.jpg" alt=""></div>
+                    <div class="client-item"><img src="/assets/images/custom_logo_06.jpg" alt=""></div>
+                    <div class="client-item"><img src="/assets/images/custom_logo_07.jpg" alt=""></div>
+                    <div class="client-item"><img src="/assets/images/custom_logo_08.jpg" alt=""></div>
+                    <div class="client-item"><img src="/assets/images/custom_logo_09.jpg" alt=""></div>
+                    <div class="client-item"><img src="/assets/images/custom_logo_10.jpg" alt=""></div>
+                    <div class="client-item"><img src="/assets/images/custom_logo_11.jpg" alt=""></div>
+                    <div class="client-item"><img src="/assets/images/custom_logo_12.jpg" alt=""></div>
+                    <div class="client-item"><img src="/assets/images/custom_logo_13.jpg" alt=""></div>
+                    <div class="client-item"><img src="/assets/images/custom_logo_14.jpg" alt=""></div>
                 </div>
             </div>
 
@@ -558,6 +562,30 @@
     <script type="module" src="./js/main.js"></script>
     <script>
 
+
+        const portfolioItems = document.querySelectorAll('.portfolio-item');
+        portfolioItems.forEach(item => {
+            item.addEventListener('click', () => {
+                if(window.innerWidth > 1000){
+                    item.classList.add('active');
+                }
+            });
+        });
+
+        window.addEventListener('resize', () => {
+            portfolioItems.forEach(item => {
+                item.classList.remove('active');
+            });
+        });
+
+        const portLinK = document.querySelectorAll('.portfolio-item .more-btn');
+        portLinK.forEach(item => {
+            item.addEventListener('click', () => {
+                const url = item.getAttribute('data-url');
+                location.href = url;
+            });
+        });
+        
         
 
         document.querySelector('.close-btn').addEventListener('click', () => {
@@ -595,7 +623,7 @@
         const consultingOne = document.querySelector('.consulting-one');
         const consultingContainer = document.querySelector('.consulting-container');
 
-        // 스텝1 클릭 시 → 스텝2 보여주고, 선택표시 갱신
+        
         step1Items.forEach(item => {
             item.addEventListener('click', () => {
                 step1Items.forEach(el => el.classList.remove('active'));
@@ -609,7 +637,6 @@
             });
         });
 
-        // 스텝2 클릭 시 → consulting-one 숨기고 consulting-container 보여줌
         step2Items.forEach(item => {
             item.addEventListener('click', () => {
                 step2Items.forEach(el => el.classList.remove('active'));
@@ -623,13 +650,12 @@
         const recheckBtn = document.querySelector('.btn-recheck');
 
         recheckBtn.addEventListener('click', () => {
-            // step1 보여주고 나머지 숨김
             step1Box.style.display = 'block';
             step2Box.style.display = 'none';
             if (consultingOne) consultingOne.style.display = 'block';
             if (consultingContainer) consultingContainer.style.display = 'none';
 
-            // 선택 초기화
+            
             step1Items.forEach(el => el.classList.remove('active'));
             step2Items.forEach(el => el.classList.remove('active'));
             selectText.textContent = '';
@@ -663,9 +689,6 @@
                     document.querySelector('#textBox').innerHTML = texts[this.realIndex];
                     console.log(this.realIndex);
 
-                    //const lines = document.querySelectorAll('.line');
-                    
-
                     if(this.realIndex === 0){
                         document.querySelector('.pg-line-1').classList.add('active');
                         document.querySelector('.pg-line-2').classList.remove('active');
@@ -676,10 +699,6 @@
                         document.querySelector('.pg-line-1').classList.remove('active');
                         document.querySelector('.pg-line-2').classList.remove('active');
                     }
-                    
-                    
-                    
-
                 }
             }
         });
