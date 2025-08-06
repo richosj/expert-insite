@@ -64,6 +64,7 @@
                         <span>2</span>
                         <div class="line pg-line-2"></div>
                         <span>3</span>
+                        <div class="line pg-line-3"></div>
                         <button class="btn-control"></button>
                     </div>
 
@@ -427,6 +428,10 @@
                     <div class="client-item"><img src="./assets/images/custom_logo_12.jpg" alt=""></div>
                     <div class="client-item"><img src="./assets/images/custom_logo_13.jpg" alt=""></div>
                     <div class="client-item"><img src="./assets/images/custom_logo_14.jpg" alt=""></div>
+                    <div class="client-item"><img src="./assets/images/custom_logo_15.jpg" alt=""></div>
+                    <div class="client-item"><img src="./assets/images/custom_logo_16.jpg" alt=""></div>
+                    <div class="client-item"><img src="./assets/images/custom_logo_17.jpg" alt=""></div>
+                    <div class="client-item"><img src="./assets/images/custom_logo_18.jpg" alt=""></div>
                 </div>
             </div>
 
@@ -599,6 +604,7 @@
         portfolioItems.forEach(item => {
             item.addEventListener('click', () => {
                 if(window.innerWidth > 1000){
+                    portfolioItems.forEach(el => el.classList.remove('active'));
                     item.classList.add('active');
                 }
             });
@@ -719,21 +725,37 @@
                     ];
 
                     document.querySelector('#textBox').innerHTML = texts[this.realIndex];
-                    console.log(this.realIndex);
+                    //console.log(this.realIndex);
 
                     if(this.realIndex === 0){
                         document.querySelector('.pg-line-1').classList.add('active');
                         document.querySelector('.pg-line-2').classList.remove('active');
+                        document.querySelector('.pg-line-3').classList.remove('active');
                     }else if(this.realIndex === 1){
                         document.querySelector('.pg-line-1').classList.remove('active');
                         document.querySelector('.pg-line-2').classList.add('active');
+                        document.querySelector('.pg-line-3').classList.remove('active');
                     }else if(this.realIndex === 2){
                         document.querySelector('.pg-line-1').classList.remove('active');
                         document.querySelector('.pg-line-2').classList.remove('active');
+                        document.querySelector('.pg-line-3').classList.add('active');
                     }
                 }
             }
         });
+        
+
+        const visualBtnControls = document.querySelectorAll('.btn-control');
+        visualBtnControls.forEach(item => {
+            item.addEventListener('click', () => {
+                if(visualSwiper.autoplay.running){
+                    visualSwiper.autoplay.stop();
+                }else{
+                    visualSwiper.autoplay.start();
+                }
+            });
+        });
+        
     </script>
 </body>
 </html>
