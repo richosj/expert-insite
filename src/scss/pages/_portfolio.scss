@@ -3,6 +3,11 @@
 @use "../abstracts/mixins" as *;
 
 .portfolio{
+  padding-bottom: 60px;
+  
+  @media (min-width: 1000px) {
+    padding-bottom: 120px;
+  }
   .extend-list {
     border-top:1px solid #B4C1D3;
     > li {
