@@ -270,6 +270,14 @@
     &.bg2{
         background-image: url('@/assets/images/service_visual.png');
     }
+    &.bg3{
+        background-image: url('@/assets/images/portfolio_visual.png');
+        &:before {display:none;}
+    }
+    &.bg4{
+        background-image: url('@/assets/images/about_visual.png');
+        &:before {display:none;}
+    }
     @media (max-width: 1440px) {
         margin-bottom: 5rem;
         height: 24rem;
