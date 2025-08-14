@@ -564,7 +564,9 @@ body:has(#login) {
   height: 10rem;
   background: #fff;
   z-index: 100;
-  position: relative;
+  position: fixed;
+  top: 0;
+  left: 0;
 }
 .header-nav {
   z-index: 3;
@@ -735,6 +737,7 @@ body:has(#login) {
   align-items: center;
   justify-content: center;
   margin-bottom: 7rem;
+  margin-top: 10rem;
 }
 .banner.bg1 {
   background-image: url("../images/insight_visual.png");
@@ -758,12 +761,14 @@ body:has(#login) {
   .banner {
     margin-bottom: 5rem;
     height: 24rem;
+    margin-top: 8rem;
   }
 }
 @media (max-width: 768px) {
   .banner {
     margin-bottom: 3rem;
     height: 20rem;
+    margin-top: 4.5rem;
   }
 }
 .banner .banner-title {

@@ -33,7 +33,49 @@
         document.querySelectorAll('.header-nav li').forEach(li => li.classList.remove('open'));
         initMobileMenu();
     });
-    </script>  <script type="module" src="./assets/js/main.js"></script>
+    </script>    <style>
+        .home-portfolio .portfolio-list:has(.active) .portfolio-item.active .list-grid {
+            opacity: 0;
+        }
+        .portfolio-item .list-grid {
+            opacity: 0;
+        }
+        .portfolio-item.active .list-grid {
+            animation: fadeIn 0.7s ease forwards;
+            animation-delay: 0.4s; /* 슬라이드 0.5초 기다린 후 실행 */
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(20px); /* 살짝 아래서 올라오는 효과 */
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+    </style>
+    <script>
+    function initMobileMenu() {
+        if (window.innerWidth <= 1000) {
+        document.querySelectorAll('.header-nav > ul > li > a').forEach(link => {
+            link.addEventListener('click', function (e) {
+            e.preventDefault(); // 링크 이동 방지
+            const li = this.parentElement;
+            li.classList.toggle('open');
+            });
+        });
+        }
+    }
+    
+    window.addEventListener('DOMContentLoaded', initMobileMenu);
+    window.addEventListener('resize', () => {
+        // 리사이즈 시 메뉴 초기화
+        document.querySelectorAll('.header-nav li').forEach(li => li.classList.remove('open'));
+        initMobileMenu();
+    });
+    </script>
+  <script type="module" src="./assets/js/main.js"></script>
   <link rel="stylesheet" href="./assets/css/main.css">
 </head>
 
