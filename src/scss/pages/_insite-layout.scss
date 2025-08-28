@@ -207,7 +207,7 @@
 }
 
 .footer-contact{
-    padding: 8.5rem 0 12.5rem;
+    padding: 6.5rem 0 6.5rem;
     background: rgba(37, 37, 40, 1);
     @media (max-width: 1000px) {
         padding: 3.5rem 0;
@@ -215,71 +215,193 @@
     .footer-contact-container{
         max-width: 1440px;
         margin: 0 auto;
-        padding: 0 2rem;
+        padding: 0 7rem;
+        display: flex;
+        gap: 0 15rem;
+        position: relative;
+        @media (max-width: 1000px) {
+            flex-direction: column; 
+            gap:0;
+        }
+        &::after{
+            content:"";
+            display: block;
+            position: absolute;
+            left: 50%;
+            top: 0;
+            width: 1px;
+            bottom: 0;
+            background-color: #fff;
+            opacity: .5;
+            @media (max-width: 1000px) {
+                display: none;
+            }
+        }
         @media (max-width: 1440px) {
             padding: 0 1.2rem;
         }
+        
+    }
+    .l,
+    .r{
+        width: 50%;
         @media (max-width: 1000px) {
-            
+            width: 100%;
+        }
+    }
+    .l{
+        @media (max-width: 1000px) {
+            padding-bottom: 3rem;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.5);
+        }
+    }
+    .r{
+        @media (max-width: 1000px) {
+            padding-top: 3rem;
         }
     }
     .title{
         font-size: 2rem;
         font-weight: 700;
         color: #fff;
-        margin-bottom: 2.5rem;
+        margin-bottom: 2rem;
         @media (max-width: 1000px) {
             font-size: 1.8rem;
-            margin-bottom: 2rem;
+            margin-bottom: 1.5rem;
             text-align: center;
         }
         @media (max-width: 768px) {
             font-size: 1.6rem;
-            margin-bottom: 1.5rem;
+            margin-bottom: 1rem;
         }
     }
-    .box{
-        display: flex;
-        align-items: center;
-        justify-content: space-between;
+    .desc{
+        font-size: 2.3rem;
+        font-weight: 500;
+        color: #fff;
         @media (max-width: 1000px) {
-            flex-direction: column;
-            align-items: center;
-            gap: 1rem;
+            font-size: 2rem;
             text-align: center;
         }
-        .desc{
-            font-size: 3.4rem;
-            font-weight: 500;
-            color: #fff;
-            @media (max-width: 1000px) {
-                font-size: 3rem;
+        @media (max-width: 768px) {
+            font-size: 1.5rem;
+            span{
+                font-weight: 400;
+                font-size: 1.8rem;
             }
-            @media (max-width: 768px) {
-                font-size: 2.5rem;
-                span{
-                    font-weight: 400;
+        }
+    }
+
+    .subscribe-form{
+        margin-top: 2.5rem;
+        @media (max-width:768px) {
+            margin-top: 2rem;
+        }
+        .g{
+            display: flex;
+            input{
+                display: block;
+                height: 5.6rem;
+                background-color: #000;
+                border: 1px solid #D9D9D9;
+                flex:1;
+                border-radius: 0;
+                font-size: 20px;
+                font-weight: 500;
+                @media (max-width: 1000px) {
+                    height: 4rem;
                     font-size: 1.8rem;
+                }
+                @media (max-width: 768px) {
+                    font-size: 1.6rem;
+                }
+            }
+            button{
+                width: 12rem;
+                height: 5.6rem;
+                font-weight: 700;
+                font-size: 2rem;
+                line-height: 100%;
+                color: rgba(0, 0, 0, 1);
+                background: rgba(217, 217, 217, 1);
+                text-align: center;
+                @media (max-width: 1000px) {
+                    height: 4rem;
+                    font-size: 1.8rem;
+                }
+                @media (max-width: 768px) {
+                    font-size: 1.6rem;
                 }
             }
         }
-        .btn-contact{
-            width: 26.4rem;
-            height: 8.5rem;
-            font-weight: 700;
-            font-size: 2rem;
-            line-height: 100%;
-            color: rgba(0, 0, 0, 1);
-            background: rgba(217, 217, 217, 1);
-            text-align: center;
-            @media (max-width: 1000px) {
-                height: 6rem;
-                font-size: 1.8rem;
+    }
+    .subscripbe-check{
+        label{
+            display: inline-flex;
+            align-items: center;
+            gap:0 1.3rem;
+            position: relative;
+            @media(max-width:768px){
+                gap: 0 .7rem;
             }
-            @media (max-width: 768px) {
-                width: 27rem;
-                margin-top: 3rem;
+            input{
+                position: absolute;
+                left: -9999em;
             }
+            i{
+                display: inline-block;
+                width: 15px;
+                height: 15px;
+                background: #fff;
+                @media(max-width:768px){
+                    width: 12px;
+                    height: 12px;
+                    background-size: 100% auto;
+                }
+            }
+            span{
+                font-weight: 500;
+                font-size: 20px;
+                color: rgba(178, 178, 178, 1);
+                @media (max-width: 1000px) {
+                    font-size: 1.8rem;
+                }
+                @media(max-width:768px){
+                    font-size: 1.6rem;
+                }
+            }
+            &:has(:checked){
+                i{
+                    background: url('@/assets/images/check.png') no-repeat 50% 50%;
+                }
+            }
+        }
+    }
+    .btn-box{
+        @media (max-width: 1000px) {
+            display: flex;
+            justify-content: center;
+        }
+    }
+    .btn-contact{
+        margin-top: 6.5rem;
+        width: 26.4rem;
+        height: 5.6rem;
+        font-weight: 700;
+        font-size: 2rem;
+        line-height: 100%;
+        color: rgba(0, 0, 0, 1);
+        background: rgba(217, 217, 217, 1);
+        text-align: center;
+        @media (max-width: 1000px) {
+            height: 4rem;
+            font-size: 1.8rem;
+            margin: 0 auto;
+            margin-top: 2rem;
+        }
+        @media (max-width: 768px) {
+            margin-top: 2rem;
+            font-size: 1.6rem;
         }
     }
 }
