@@ -13,69 +13,7 @@
     <title>BX컨설팅</title>
     <link rel="stylesheet" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-gov-dynamic-subset.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
-    <script>
-    function initMobileMenu() {
-        if (window.innerWidth <= 1000) {
-        document.querySelectorAll('.header-nav > ul > li > a').forEach(link => {
-            link.addEventListener('click', function (e) {
-            e.preventDefault(); // 링크 이동 방지
-            const li = this.parentElement;
-            li.classList.toggle('open');
-            });
-        });
-        }
-    }
-    
-    window.addEventListener('DOMContentLoaded', initMobileMenu);
-    window.addEventListener('resize', () => {
-        // 리사이즈 시 메뉴 초기화
-        document.querySelectorAll('.header-nav li').forEach(li => li.classList.remove('open'));
-        initMobileMenu();
-    });
-    </script>    <style>
-        .home-portfolio .portfolio-list:has(.active) .portfolio-item.active .list-grid {
-            opacity: 0;
-        }
-        .portfolio-item .list-grid {
-            opacity: 0;
-        }
-        .portfolio-item.active .list-grid {
-            animation: fadeIn 0.7s ease forwards;
-            animation-delay: 0.4s; /* 슬라이드 0.5초 기다린 후 실행 */
-        }
-        @keyframes fadeIn {
-            from {
-                opacity: 0;
-                transform: translateY(20px); /* 살짝 아래서 올라오는 효과 */
-            }
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-    </style>
-    <script>
-    function initMobileMenu() {
-        if (window.innerWidth <= 1000) {
-        document.querySelectorAll('.header-nav > ul > li > a').forEach(link => {
-            link.addEventListener('click', function (e) {
-            e.preventDefault(); // 링크 이동 방지
-            const li = this.parentElement;
-            li.classList.toggle('open');
-            });
-        });
-        }
-    }
-    
-    window.addEventListener('DOMContentLoaded', initMobileMenu);
-    window.addEventListener('resize', () => {
-        // 리사이즈 시 메뉴 초기화
-        document.querySelectorAll('.header-nav li').forEach(li => li.classList.remove('open'));
-        initMobileMenu();
-    });
-    </script>
-  <script type="module" src="./assets/js/main.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />  <script type="module" src="./assets/js/main.js"></script>
   <link rel="stylesheet" href="./assets/css/main.css">
 </head>
 
@@ -88,41 +26,10 @@
                 </div>
                 <nav class="header-nav">
                     <ul>
-                        <li><a href="#">서비스</a>
-                            <div class="depth">
-                                <div class="depth-item">
-                                    <a href="#">경영전략솔루션</a>
-                                    <a href="#">영업/마케팅</a>
-                                    <a href="#">서비스(CX)</a>
-                                    <a href="#">인사조직</a>
-                                    <a href="#">리서치</a>
-                                    <a href="#">시스템(SaaS)</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li><a href="#">인사이트</a>
-                            <div class="depth">
-                                <div class="depth-item">
-                                    <a href="#">레터</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li><a href="#">포트폴리오</a>
-                            <div class="depth">
-                                <div class="depth-item">
-                                    <a href="#">수행사례</a>
-                                </div>
-                            </div>
-                        </li>
-                        <li><a href="#">회사소개</a>
-                            <div class="depth">
-                                <div class="depth-item end">
-                                    <a href="#">VMC</a>
-                                    <a href="#">Network</a>
-        
-                                </div>
-                            </div>
-                        </li>
+                        <li><a href="#">서비스</a></li>
+                        <li><a href="#">인사이트</a></li>
+                        <li><a href="#">포트폴리오</a></li>
+                        <li><a href="#">회사소개</a></li>
                     </ul>
                 </nav>
         
@@ -130,10 +37,9 @@
                     <span class="line line1"></span>
                     <span class="line line2"></span>
                     <span class="line line3"></span>
-                </div>
+                  </div>
                 
             </div>
-            <div class="header-bg"></div>
         </header>
         <script>
             const hamburger = document.getElementById('hamburger');
@@ -590,13 +496,28 @@
 
         <div class="footer-contact">
             <div class="footer-contact-container">
-                <div class="title">Contact Us</div>
-                <div class="box">
+                <div class="l">
+                    <div class="title">Newsletter</div>
+                    <div class="desc">경영환경 변화에 기민하게 대응할 수 있도록, <br class="mobile-block">비엑스컨설팅에서<br>매주 뉴스레터로 인사이트를 제공해 드립니다.</div>
+                    <div class="subscribe-form">
+                        <div class="subscripbe-check">
+                            <label for="chk"><i></i><input type="checkbox" id="chk"><span>개인정보 정책에 동의합니다.</span></label>
+                        </div>
+                        <div class="g">
+                            <input type="text" placeholder="이메일 주소 입력">
+                            <button type="button" class="subscribe-submit">구독신청</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="r">
+                    <div class="title">Contact Us</div>
                     <div class="desc">
-                        <span>지금 고민하고 있는 문제를</span> <br>
+                        지금 고민하고 있는 문제를<br>
                         당신의 든든한 파트너인 <br class="mobile-block">비엑스컨설팅과 상의하세요.
                     </div>
-                    <button class="btn-contact">문의하기</button>
+                    <div class="btn-box">
+                        <button class="btn-contact">문의하기</button>
+                    </div>
                 </div>
             </div>
         </div>
