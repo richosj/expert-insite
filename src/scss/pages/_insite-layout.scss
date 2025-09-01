@@ -1,7 +1,10 @@
 @use "../abstracts/variables" as *;
 @use "../abstracts/functions" as *;
 @use "../abstracts/mixins" as *;
-
+:root{
+    --bg-height: 26.5rem;
+    --depth-height: 24.5rem;
+}
 .container{
     max-width: 1440px;
     margin: 0 auto;
@@ -43,9 +46,9 @@
                 }
             }
             .header-nav{
-                ul{
-                    li{
-                        a{
+                > ul{
+                    > li{
+                        > a{
                             color: #000;
                         }
                     }
@@ -55,14 +58,24 @@
     }
     
     .header-nav{
-        ul{
-            li{
-                a{
+        > ul{
+            > li{
+                position: relative;
+                > a{
                     color: #fff;
                     @media (max-width: 1000px) {
                         color: #000;
                     }
                 }
+                @media (min-width: 1000px) {
+                    .depth{
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        width: 100%;
+                    }
+                }
+                
             }
         }
     }
@@ -75,6 +88,24 @@
     height: 10rem;
     background: #fff;
     z-index: 100;
+    position: fixed;
+    top: 0;
+    left: 0;
+    &-nav{
+        z-index: 3;
+    }
+    &-bg{
+        height: 0;
+        overflow: hidden;
+        position: absolute;
+        left: 0;
+        top: 10rem;
+        width: 100%;
+        background: #fff;
+        z-index: 2;
+        transition:all 0.5s;
+        visibility: hidden;
+    }
     @media (max-width: 1000px) {
         height: 8rem;
         border-bottom: 1px solid #ddd;
@@ -114,18 +145,90 @@
     }
 }
 
-.header-nav{
-    ul{
-        display: flex;
-        gap: 0 9.5rem;
-        li{
-            a{
-                font-weight: 700;
-                font-size: 1.8rem;
-                line-height: 100%;
-                letter-spacing: 0%;
-                color: rgba(34, 34, 34, 1);
+.header:has(.header-nav:hover){
+    @media (min-width: 1000px) {
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+
+    .header-bg{
+        height: var(--bg-height);
+        visibility: visible;
+    }
+    .header-nav{
+        > ul{
+            > li{
+                > a{
+                    color: #000;
+                }
+                .depth{
+                    visibility: visible;
+                    height: var(--depth-height);
+                    padding-top: 1.5rem;
+                }
             }
+        }
+    }
+    }
+}
+
+.header-nav{
+    
+    > ul{
+        display: flex;
+        > li{
+            @media (min-width: 1000px) {
+                position: relative;
+                &:not(:first-child){
+                    > a{
+                        padding-left: 2.5rem;
+                    }
+                    .depth-item{
+                        a{
+                            padding-left: 2.5rem;
+                        }
+                    }
+                }
+                > a{
+                    height: 10rem;
+                    width: 21rem;
+                    display: flex;
+                    align-items: center;
+                    font-weight: 700;
+                    font-size: 1.8rem;
+                    line-height: 100%;
+                    letter-spacing: 0%;
+                    color: rgba(34, 34, 34, 1);
+                }
+            }
+        }
+        @media (min-width: 1000px) {
+
+        
+        .depth{
+            position: absolute;
+            top: 10rem;
+            visibility: hidden;
+            height: 0;
+            padding-top: 0;
+            background: #fff;
+            overflow: hidden;
+            transition:all 0.5s;
+            width: 100%;
+        }
+        .depth-item{
+            height: 22rem;
+            border-right: 1px dashed #B9B9B9;
+            &.end{
+                border-right: 0;
+            }
+            a{
+                display: block;
+                font-size: 1.6rem;
+                font-weight: 500;
+                color: #000;
+                line-height: 3rem;
+            }
+        }
         }
     }
     
@@ -137,12 +240,12 @@
         width: 100%;
         background: #fff;
         z-index: 100;
-        ul{
+        > ul{
             flex-direction: column;
             gap: 0;
             padding: 0;
-            li{
-                a{
+            > li{
+                > a{
                     color: #000;
                     display: block;
                     padding: 1.5rem 0;
@@ -165,19 +268,30 @@
     align-items: center;
     justify-content: center;
     margin-bottom: 7rem;
+    margin-top: 10rem;
     &.bg1{
         background-image: url('@/assets/images/insight_visual.png');
     }
     &.bg2{
         background-image: url('@/assets/images/service_visual.png');
     }
+    &.bg3{
+        background-image: url('@/assets/images/portfolio_visual.png');
+        &:before {display:none;}
+    }
+    &.bg4{
+        background-image: url('@/assets/images/about_visual.png');
+        &:before {display:none;}
+    }
     @media (max-width: 1440px) {
         margin-bottom: 5rem;
         height: 24rem;
+        margin-top: 8rem;
     }
     @media (max-width: 768px) {
         margin-bottom: 3rem;
         height: 20rem;
+        margin-top: 4.5rem;
     }
     .banner-title{
         font-weight: 700;
@@ -876,3 +990,56 @@ body:has(.hamburger.active){
         left: 0;
     }
 }
+
+
+@media screen and (max-width: 1000px) {
+    .header-nav{
+        > ul{
+            > li{
+                > a{
+                    display: flex;
+                    font-size: 1.5rem;
+                    font-weight: 500;
+                    padding: 1.5rem;
+                    justify-content: space-between;
+                    align-items: center;
+                    &::after{
+                        content: '';
+                        display: block;
+                        width: 2.4rem;
+                        height: 2.4rem;
+                        background: url('@/assets/images/keyboard_arrow_down_24dp_1F1F1F_FILL0_wght400_GRAD0_opsz24.svg') no-repeat center center / cover;
+                        position: relative;
+                        transform: rotate(0deg);
+                        transition:all 0.5s;
+                    }
+                }
+            }
+        }
+    }
+    .header-nav .depth {
+      display: none;
+    }
+    .header-nav li.open {
+        > a{
+            &::after{
+                transform: rotate(180deg);
+            }
+        }
+        .depth {
+            display: block;
+            border-bottom: 1px solid #ddd;
+        }
+    }
+    .header-nav li .depth-item{
+        display: flex;
+        flex-direction: column;
+        gap:0 1rem;
+        padding: 1rem 0;
+        a{
+            display: block;
+            padding: .5rem 1.5rem;
+            font-size: 1.2rem;
+        }
+    }
+  }
