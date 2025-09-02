@@ -8,7 +8,27 @@
     <title>BX컨설팅</title>
     <link rel="stylesheet" as="style" href="https://cdn.jsdelivr.net/gh/orioncactus/pretendard@v1.3.9/dist/web/static/pretendard-gov-dynamic-subset.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />    <style>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <script>
+    function initMobileMenu() {
+        if (window.innerWidth <= 1000) {
+        document.querySelectorAll('.header-nav > ul > li > a').forEach(link => {
+            link.addEventListener('click', function (e) {
+            e.preventDefault(); // 링크 이동 방지
+            const li = this.parentElement;
+            li.classList.toggle('open');
+            });
+        });
+        }
+    }
+    
+    window.addEventListener('DOMContentLoaded', initMobileMenu);
+    window.addEventListener('resize', () => {
+        // 리사이즈 시 메뉴 초기화
+        document.querySelectorAll('.header-nav li').forEach(li => li.classList.remove('open'));
+        initMobileMenu();
+    });
+    </script>    <style>
         @font-face {
             font-family: 'ChosunGu';
             src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/noonfonts_20-04@1.0/ChosunGu.woff') format('woff');
@@ -252,6 +272,27 @@
                     <td><a href="./12-인사이트-서비스.html" target="_blank">12-인사이트-서비스.html</a></td>
                     <td>인사이트-고객경험(CX) 솔루션 CX</td>
                     <td>2025-08-05</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td><a href="./13-포트폴리오.html" target="_blank">13-포트폴리오.html</a></td>
+                    <td>포트폴리오</td>
+                    <td>2025-08-14</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td><a href="./14-회사소개-VMC.html" target="_blank">14-회사소개-VMC.html</a></td>
+                    <td>회사소개</td>
+                    <td>2025-08-14</td>
+                    <td>-</td>
+                    <td>-</td>
+                </tr>
+                <tr>
+                    <td><a href="./15-회사소개-NETWORK.html" target="_blank">15-회사소개-NETWORK.html</a></td>
+                    <td>회사소개</td>
+                    <td>2025-08-14</td>
                     <td>-</td>
                     <td>-</td>
                 </tr>
