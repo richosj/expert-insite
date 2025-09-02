@@ -461,6 +461,7 @@
                 font-size:3.6rem;
                 font-weight: 700;
                 color: #222;
+                white-space: nowrap;
                 @media (max-width: 1000px) {
                     font-size: 2.4rem;
                 }
@@ -952,5 +953,26 @@
             height: 100%;
             object-fit: contain;
         }
+    }
+}
+.insites-item{
+    .img-box{
+        position: relative;
+        padding-bottom: 56.25%;
+        img{
+            position: absolute;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: center;
+        }
+    }
+}
+.sm .insites-item{
+    .img-box{
+        width: 61.065%;
+        padding-bottom: 18.3%;
     }
 }
