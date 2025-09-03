@@ -947,6 +947,7 @@ body:has(#login) {
   color: rgb(0, 0, 0);
   background: rgb(217, 217, 217);
   text-align: center;
+  flex-shrink: 0;
 }
 @media (max-width: 1000px) {
   .footer-contact .subscribe-form .g button {
@@ -957,6 +958,7 @@ body:has(#login) {
 @media (max-width: 768px) {
   .footer-contact .subscribe-form .g button {
     font-size: 1.6rem;
+    width: 10rem;
   }
 }
 .footer-contact .subscripbe-check label {
@@ -2147,6 +2149,15 @@ body:has(.hamburger.active) .header-nav {
     width: 10rem;
     height: 4rem;
     font-size: 1.8rem;
+  }
+}
+
+.insite-detail-content .origin {
+  font-size: 1.5rem;
+}
+@media (max-width: 768px) {
+  .insite-detail-content .origin {
+    font-size: 1.2rem;
   }
 }
 
@@ -3531,7 +3542,8 @@ body:has(.hamburger.active) .header-nav {
 }
 
 .sm .insites-item .img-box {
-  width: 61.065%;
+  flex-shrink: 0;
+  width: 29%;
   padding-bottom: 18.3%;
 }
 
