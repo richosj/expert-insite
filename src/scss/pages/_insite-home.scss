@@ -972,7 +972,8 @@
 }
 .sm .insites-item{
     .img-box{
-        width: 61.065%;
+        flex-shrink: 0;
+        width: 29%;
         padding-bottom: 18.3%;
     }
 }
