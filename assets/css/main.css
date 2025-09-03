@@ -1669,8 +1669,13 @@ body:has(.hamburger.active) .header-nav {
 .insite-list .insite-list-item a .insite-list-item-image {
   width: 100%;
   height: 100%;
+  position: relative;
+  padding-bottom: 56.25%;
 }
 .insite-list .insite-list-item a .insite-list-item-image img {
+  position: absolute;
+  left: 0;
+  top: 0;
   width: 100%;
   height: 100%;
   object-fit: cover;
