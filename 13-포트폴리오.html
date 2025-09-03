@@ -26,12 +26,13 @@
         }
     }
     
-    window.addEventListener('DOMContentLoaded', initMobileMenu);
+    
     window.addEventListener('resize', () => {
         // 리사이즈 시 메뉴 초기화
         document.querySelectorAll('.header-nav li').forEach(li => li.classList.remove('open'));
-        initMobileMenu();
+        //initMobileMenu();
     });
+    window.addEventListener('DOMContentLoaded', initMobileMenu);
     </script>    <script>
     function initMobileMenu() {
         if (window.innerWidth <= 1000) {
