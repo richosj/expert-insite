@@ -1,0 +1,135 @@
+<!-- @pageTitle 관리자 목록 -->
+<!-- @pageCreated 2025-08-03 -->
+<!-- @pageUpdated - -->
+<!-- @pageNote - -->
+
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    {{> meta}}
+</head>
+
+<body>
+    <div class="admin">
+        <div class="admin-header">
+            <div class="admin-header-l">
+                <h2 class="admin-logo"></h2>
+            </div>
+            <div class="admin-header-r">
+                <ul class="admin-header-menu">
+                    <li><a href="#">인사관리</a></li>
+                    <li><a href="#">레터</a></li>
+                    <li><a href="#">인사이트</a></li>
+                </ul>
+                <a href="#" class="admin-header-logout"><i><img
+                            src="/assets/images/logout_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt=""></i>로그아웃</a>
+            </div>
+        </div>
+        <div class="admin-banner">
+            <h1>리드 관리</h1>
+        </div>
+        <div class="admin-content">
+            <div class="bo-list">
+                <div class="toolbar">
+                    <div style="flex: 1 1 260px;"><input type="text" placeholder="검색: 이메일, 회사, 직책…"></div>
+                    <div style="width: 180px;"><select>
+                            <option value="">상태: 전체</option>
+                            <option value="new">신규</option>
+                            <option value="progress">상담 중</option>
+                            <option value="cancel">취소</option>
+                            <option value="fail">실패</option>
+                            <option value="success">성공</option>
+                        </select></div>
+                    <div style="width: 180px;"><select>
+                            <option value="">문의타입: 전체</option>
+                            <option>컨설팅</option>
+                            <option>기타</option>
+                        </select></div>
+                    <div style="width: 220px;"><select>
+                            <option value="">컨설팅분야: 전체</option>
+                            <option>경영전략</option>
+                            <option>영업/마케팅</option>
+                            <option>서비스(CX)</option>
+                            <option>인사조직</option>
+                            <option>리서치</option>
+                            <option>시스템(SaaS)</option>
+                            <option>AI</option>
+                        </select></div>
+                </div>
+                <table>
+                    <thead>
+                        <tr>
+                            <th style="width: 110px;">신청일</th>
+                            <th style="width: 90px;">상태</th>
+                            <th style="width: 90px;">문의타입</th>
+                            <th style="width: 120px;">컨설팅분야</th>
+                            <th style="width: 130px;">직책명</th>
+                            <th style="width: 200px;">이메일</th>
+                            <th style="width: 180px;">회사/기관명</th>
+                            <th style="width: 160px;">작업</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>2025.09.08</td>
+                            <td><span class="badge badge-new">신규</span></td>
+                            <td>컨설팅</td>
+                            <td>AI</td>
+                            <td>팀장</td>
+                            <td>kim@ex.co</td>
+                            <td>EXC</td>
+                            <td>
+                                <a href="#" class="admin-btn-edit">관리</a>
+                                <a href="#" class="admin-btn-del">삭제</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2025.09.08</td>
+                            <td><span class="badge badge-progress">상담 중</span></td>
+                            <td>컨설팅</td>
+                            <td>AI</td>
+                            <td>팀장</td>
+                            <td>kim@ex.co</td>
+                            <td>EXC</td>
+                            <td>
+                                <a href="#" class="admin-btn-edit">관리</a>
+                                <a href="#" class="admin-btn-del">삭제</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>2025.09.08</td>
+                            <td><span class="badge badge-success">성공</span></td>
+                            <td>컨설팅</td>
+                            <td>AI</td>
+                            <td>팀장</td>
+                            <td>kim@ex.co</td>
+                            <td>EXC</td>
+                            <td>
+                                <a href="#" class="admin-btn-edit">관리</a>
+                                <a href="#" class="admin-btn-del">삭제</a>
+                            </td>
+                        </tr>
+                        
+                    </tbody>
+                </table>
+
+                <nav class="paging">
+                    <button class="paging-prev">이전</button>
+                    <button class="paging-page current">1</button>
+                    <button class="paging-page">2</button>
+                    <button class="paging-page">3</button>
+                    <button class="paging-page">4</button>
+                    <button class="paging-page">5</button>
+                    <button class="paging-next">다음</button>
+                </nav>
+                <div class="action-fab">
+                    <a href="#" class="admin-btn">글쓰기</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script type="module" src="./js/main.js"></script>
+</body>
+
+</html>

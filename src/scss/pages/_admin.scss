@@ -369,3 +369,134 @@ body:has(#login){
         padding-left: 12.7rem;
     }
 }
+
+.admin-header{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 10rem;
+    padding: 0 3.5rem;
+    &-l{
+        width: 24.1rem;
+        height: 3.3rem;
+        background: url('@/assets/images/login-logo.png') no-repeat center center;
+    }
+    &-r{
+        display: flex;
+        align-items: center;
+        gap:0 2rem;
+    }
+    &-menu{
+        display: flex;
+        align-items: center;
+        gap:0 3rem;
+        li{
+            display: flex;
+            align-items: center;
+            gap:0 3rem;
+            a{
+                font-size: 2rem;
+                font-weight: 400;
+                line-height: 100%;
+                letter-spacing: 0%;
+            }
+            &::after{
+                content: '';
+                display: block;
+                width: 1px;
+                height: 1.6rem;
+                background: rgba(172, 172, 172, 1);
+            }
+        }
+        
+    }
+    &-logout{
+        display: flex;
+        align-items: center;
+        gap:0 .5rem;
+        font-size: 1.6rem;
+        font-weight: 400;
+        line-height: 100%;
+        letter-spacing: 0%;
+        border-radius: 4px;
+        background: rgba(172, 172, 172, .4);
+        padding: 1rem 2rem;
+    }
+}
+
+.toolbar{
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    padding: 12px;border-bottom: 1px solid #eee;
+    input[type="text"],
+    select{
+        width: 100%;
+        padding: 10px;
+        border: 1px solid #eee !important;
+        border-radius: 10px;
+        background: #fff !important;
+        font-size: 1.4rem;
+        font-weight: 400;
+        line-height: 100%;
+        letter-spacing: 0%;
+        height: 4rem !important;
+    }
+}
+
+.bo-list table {
+    thead th{
+        background: #fafafa;
+        text-align: center;
+        font-size: 1.7rem;
+        font-weight: 500;
+        line-height: 100%;
+        letter-spacing: 0%;
+        height: 4rem !important;
+    
+    }
+    tbody{
+        td{
+            text-align: center;
+        }
+    }
+}
+.admin-btn-edit,
+.admin-btn-del{
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0%;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    background: rgba(172, 172, 172, .4);
+    color: #fff;
+}
+.admin-btn-edit{
+    background: rgba(147, 203, 255, 1);
+}
+.admin-btn-del{
+    background: rgba(255, 102, 102, 1);
+}
+
+.badge{
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font-size: 1.4rem;
+    font-weight: 400;
+    line-height: 100%;
+    letter-spacing: 0%;
+    color: #fff;
+}
+.badge-new{
+    color: #2563eb;
+    background:#e0e7ff;
+}
+.badge-progress{
+    color: #a16207;
+    background:#fef3c7;
+}
+.badge-success{
+    color: #16a34a;
+    background:#dcfce7;
+}
