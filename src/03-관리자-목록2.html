@@ -7,424 +7,443 @@
 <html lang="ko">
 
 <head>
-    {{> meta}}
+	{{> meta}}
 </head>
 
 <body>
-    <div class="admin">
-        <div class="admin-header">
-            <div class="admin-header-l">
-                <h2 class="admin-logo"></h2>
-            </div>
-            <div class="admin-header-r">
-                <ul class="admin-header-menu">
-                    <li><a href="#">인사관리</a></li>
-                    <li><a href="#">레터</a></li>
-                    <li><a href="#">인사이트</a></li>
-                </ul>
-                <a href="#" class="admin-header-logout"><i><img
-                            src="/assets/images/logout_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt=""></i>로그아웃</a>
-            </div>
-        </div>
-        <div class="admin-banner">
-            <h1>인사이트</h1>
-        </div>
+	<div class="admin">
+		<div class="admin-header">
+			<div class="admin-header-l">
+				<h2 class="admin-logo"></h2>
+			</div>
+			<div class="admin-header-r">
+				<ul class="admin-header-menu">
+					<li><a href="#">인사관리</a></li>
+					<li><a href="#">레터</a></li>
+					<li><a href="#">인사이트</a></li>
+				</ul>
+				<a href="#" class="admin-header-logout"><i><img
+							src="/assets/images/logout_24dp_000000_FILL0_wght400_GRAD0_opsz24.svg" alt=""></i>로그아웃</a>
+			</div>
+		</div>
+		<div class="admin-banner">
+			<h1>인사이트</h1>
+		</div>
 
 
-        <div class="admin-content">
-            <div class="bo-list-search">
-                <input type="text" placeholder="검색 위치만 잡았습니다! 쓰신던거 여기 안에만 넣어주세요." style="width: 100%;">
-            </div>
-            <div class="bo-list">
-                <table>
-                    <colgroup>
-                        <col style="width: 90px;">
-                        <col style="width: auto;">
-                        <col style="width: 130px;">
-                    </colgroup>
-                    <tbody>
-                        <tr>
-                            <td class="number">10</td>
-                            <td><a href="#">디지털 시대, 고객 경험의 판이 바뀐다: 옴니채널 쇼핑의 부상과 그 대응 전디지털 시대, 고객 경험의 판이 바뀐다: 옴니채널 쇼핑의
-                                    부상과 그 대응 전략디지털 시대, 고객 경험의 판이 바뀐다: 옴니채널 쇼핑의 부상과 그 대응 전략디지털 시대, 고객 경험의 판이 바뀐다: 옴니채널
-                                    쇼핑의 부상과 그 대응 전략디지털 시대, 고객 경험의 판이 바뀐다: 옴니채널 쇼핑의 부상과 그 대응 전략디지털 시대, 고객 경험의 판이 바뀐다:
-                                    옴니채널 쇼핑의 부상과 그 대응 전략략</a></td>
-                            <td class="date">2025-07-28</td>
-                        </tr>
-                    </tbody>
-                </table>
+		<div class="admin-content">
+			<div class="bo-list">
+				<div class="toolbar">
+					<div style="flex: 1 1 260px;"><input type="text" placeholder="검색: 이메일, 회사, 직책…"></div>
+					<div style="width: 180px;"><select>
+							<option value="">상태: 전체</option>
+							<option value="new">신규</option>
+							<option value="progress">상담 중</option>
+							<option value="cancel">취소</option>
+							<option value="fail">실패</option>
+							<option value="success">성공</option>
+						</select></div>
+					<div style="width: 180px;"><select>
+							<option value="">문의타입: 전체</option>
+							<option>컨설팅</option>
+							<option>기타</option>
+						</select></div>
+					<div style="width: 220px;"><select>
+							<option value="">컨설팅분야: 전체</option>
+							<option>경영전략</option>
+							<option>영업/마케팅</option>
+							<option>서비스(CX)</option>
+							<option>인사조직</option>
+							<option>리서치</option>
+							<option>시스템(SaaS)</option>
+							<option>AI</option>
+						</select></div>
+				</div>
+
+				<table>
+					<colgroup>
+						<col style="width: 90px;">
+						<col style="width: auto;">
+						<col style="width: 130px;">
+					</colgroup>
+					<tbody>
+						<tr>
+							<td class="number">10</td>
+							<td><a href="#">디지털 시대, 고객 경험의 판이 바뀐다: 옴니채널 쇼핑의 부상과 그 대응 전디지털 시대, 고객 경험의 판이 바뀐다: 옴니채널 쇼핑의
+									부상과 그 대응 전략디지털 시대, 고객 경험의 판이 바뀐다: 옴니채널 쇼핑의 부상과 그 대응 전략디지털 시대, 고객 경험의 판이 바뀐다: 옴니채널
+									쇼핑의 부상과 그 대응 전략디지털 시대, 고객 경험의 판이 바뀐다: 옴니채널 쇼핑의 부상과 그 대응 전략디지털 시대, 고객 경험의 판이 바뀐다:
+									옴니채널 쇼핑의 부상과 그 대응 전략략</a></td>
+							<td class="date">2025-07-28</td>
+						</tr>
+					</tbody>
+				</table>
 
 
-                <div class="action-fab v2">
-                    <a href="#" class="admin-btn">글쓰기</a>
-                </div>
-            </div>
-        </div>
-    </div>
-    <!-- 리드 관리 모달 -->
-    <div class="lead-management-modal" id="leadManagementModal">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h2>리드 관리</h2>
-            </div>
+				<div class="action-fab v2">
+					<a href="#" class="admin-btn openModalBtn">글쓰기</a>
+				</div>
+			</div>
+		</div>
 
-            <div class="form-section">
-                <div class="form-grid">
-                    <div class="form-group">
-                        <label>문의타입</label>
-                        <select>
-                            <option selected>컨설팅</option>
-                            <option>기타</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>컨설팅분야</label>
-                        <select>
-                            <option selected>AI</option>
-                            <option>데이터</option>
-                            <option>클라우드</option>
-                        </select>
-                    </div>
-                    <div class="form-group">
-                        <label>직책명</label>
-                        <input type="text" value="팀장">
-                    </div>
-                    <div class="form-group">
-                        <label>이메일주소</label>
-                        <input type="email" value="kim@ex.co">
-                    </div>
-                    <div class="form-group">
-                        <label>회사/기관명</label>
-                        <input type="text" value="EXC">
-                    </div>
-                    <div class="form-group">
-                        <label>상태</label>
-                        <select>
-                            <option selected>신규</option>
-                            <option>진행중</option>
-                            <option>완료</option>
-                        </select>
-                    </div>
-                </div>
+		<!-- 리드 관리 모달 -->
+	<div class="lead-management-modal" id="leadManagementModal">
+		<div class="modal-content">
+			<div class="modal-header">
+				<h2>리드 관리</h2>
+			</div>
 
-                <div class="form-group full-width">
-                    <label>문의내용</label>
-                    <textarea>AI PoC 상담 요청, 예산 5천.</textarea>
-                </div>
+			<div class="form-section">
+				<div class="form-grid">
+					<div class="form-group">
+						<label>문의타입</label>
+						<select>
+							<option selected>컨설팅</option>
+							<option>기타</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label>컨설팅분야</label>
+						<select>
+							<option selected>AI</option>
+							<option>데이터</option>
+							<option>클라우드</option>
+						</select>
+					</div>
+					<div class="form-group">
+						<label>직책명</label>
+						<input type="text" value="팀장">
+					</div>
+					<div class="form-group">
+						<label>이메일주소</label>
+						<input type="email" value="kim@ex.co">
+					</div>
+					<div class="form-group">
+						<label>회사/기관명</label>
+						<input type="text" value="EXC">
+					</div>
+					<div class="form-group">
+						<label>상태</label>
+						<select>
+							<option selected>신규</option>
+							<option>진행중</option>
+							<option>완료</option>
+						</select>
+					</div>
+				</div>
 
-                <div class="memo-section">
-                    <label>메모</label>
-                    <div class="memo-input-area">
-                        <textarea placeholder="상담 메모, 통화 내용, 다음 액션 등"></textarea>
-                        <button class="add-memo-btn">메모 추가</button>
-                    </div>
+				<div class="form-group full-width">
+					<label>문의내용</label>
+					<textarea>AI PoC 상담 요청, 예산 5천.</textarea>
+				</div>
 
-                    <div class="memo-list">
-                        <div class="memo-item">
-                            <div class="memo-content">첫 통화 완료. 자료 수신 대기</div>
-                            <div class="memo-date">2025-09-08 10:00:00</div>
-                            <div class="memo-actions">
-                                <button class="edit-btn">수정</button>
-                                <button class="delete-btn">삭제</button>
-                            </div>
-                        </div>
-                        <div class="memo-date-separator">2025.09.08</div>
-                    </div>
-                </div>
-            </div>
+				<div class="memo-section">
+					<label>메모</label>
+					<div class="memo-input-area">
+						<textarea placeholder="상담 메모, 통화 내용, 다음 액션 등"></textarea>
+						<button class="add-memo-btn">메모 추가</button>
+					</div>
 
-            <div class="modal-actions">
-                <button class="close-btn">닫기</button>
-                <button class="save-btn">저장</button>
-            </div>
-        </div>
-    </div>
+					<div class="memo-list">
+						<div class="memo-item">
+							<div class="memo-content">첫 통화 완료. 자료 수신 대기</div>
+							<div class="memo-date">2025-09-08 10:00:00</div>
+							<div class="memo-actions">
+								<button class="edit-btn">수정</button>
+								<button class="delete-btn">삭제</button>
+							</div>
+						</div>
+						<div class="memo-date-separator">2025.09.08</div>
+					</div>
+				</div>
+			</div>
 
-    <style>
-        .bo-list-search {
-            padding: 20px;
-        }
+			<div class="modal-actions">
+				<button class="close-btn">닫기</button>
+				<button class="save-btn">저장</button>
+			</div>
+		</div>
+	</div>
 
-        .action-fab.v2 {
-            position: static;
-            padding-top: 20px;
-            display: flex;
-            justify-content: flex-end;
-        }
+	</div>
+	
 
-        .lead-management-modal {
-            position: fixed;
-            top: 0;
-            left: 0;
-            width: 100%;
-            height: 100%;
-            background: rgba(0, 0, 0, 0.5);
-            display: none;
-            justify-content: center;
-            align-items: center;
-            z-index: 1000;
-        }
+	<style>
+		.bo-list-search {
+			padding: 20px;
+		}
 
-        .lead-management-modal.show {
-            display: flex;
-        }
+		.action-fab.v2 {
+			position: static;
+			padding-top: 20px;
+			display: flex;
+			justify-content: flex-end;
+		}
 
-        .modal-content {
-            background: white;
-            border-radius: 8px;
-            width: 90%;
-            max-width: 800px;
-            max-height: 90vh;
-            overflow-y: auto;
-            padding: 24px;
-        }
+		.lead-management-modal {
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 0, 0, 0.5);
+			display: none;
+			justify-content: center;
+			align-items: center;
+			z-index: 1000;
+		}
 
-        .modal-header h2 {
-            margin: 0 0 24px 0;
-            font-size: 20px;
-            font-weight: 600;
-            color: #333;
-        }
+			display: flex;
+		}
 
-        .form-section {
-            margin-bottom: 24px;
-        }
+		.modal-content {
+			background: white;
+			border-radius: 8px;
+			width: 90%;
+			max-width: 800px;
+			max-height: 90vh;
+			overflow-y: auto;
+			padding: 24px;
+		}
 
-        .form-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 16px 20px;
-            margin-bottom: 20px;
-        }
+		.modal-header h2 {
+			margin: 0 0 24px 0;
+			font-size: 20px;
+			font-weight: 600;
+			color: #333;
+		}
 
-        .form-group {
-            display: flex;
-            flex-direction: column;
-        }
+		.form-section {
+			margin-bottom: 24px;
+		}
 
-        .form-group.full-width {
-            grid-column: 1 / -1;
-        }
+		.form-grid {
+			display: grid;
+			grid-template-columns: 1fr 1fr;
+			gap: 16px 20px;
+			margin-bottom: 20px;
+		}
 
-        .form-group label {
-            font-size: 14px;
-            font-weight: 500;
-            color: #333;
-            margin-bottom: 6px;
-        }
+		.form-group {
+			display: flex;
+			flex-direction: column;
+		}
 
-        .form-group input,
-        .form-group select,
-        .form-group textarea {
-            padding: 8px 12px;
-            border: 1px solid #e0e0e0;
-            border-radius: 4px;
-            font-size: 14px;
-            color: #333;
-            background: white;
-        }
+		.form-group.full-width {
+			grid-column: 1 / -1;
+		}
 
-        .form-group textarea {
-            height: 6rem;
-        }
+		.form-group label {
+			font-size: 14px;
+			font-weight: 500;
+			color: #333;
+			margin-bottom: 6px;
+		}
 
+		.form-group input,
+		.form-group select,
+		.form-group textarea {
+			padding: 8px 12px;
+			border: 1px solid #e0e0e0;
+			border-radius: 4px;
+			font-size: 14px;
+			color: #333;
+			background: white;
+		}
 
-        .form-group input:focus,
-        .form-group select:focus,
-        .form-group textarea:focus {
-            outline: none;
-            border-color: #007bff;
-        }
-
-        .form-group textarea {
-            resize: vertical;
-            min-height: 80px;
-        }
-
-        .memo-section {
-            margin-top: 20px;
-        }
-
-        .memo-section textarea {
-            height: 6rem;
-        }
-
-        .memo-input-area {
-            display: flex;
-            gap: 12px;
-            align-items: flex-start;
-        }
-
-        .memo-input-area textarea {
-            flex: 1;
-            min-height: 80px;
-        }
-
-        .add-memo-btn {
-            background: #333;
-            color: white;
-            border: none;
-            padding: 12px 16px;
-            border-radius: 4px;
-            font-size: 14px;
-            cursor: pointer;
-            white-space: nowrap;
-        }
-
-        .add-memo-btn:hover {
-            background: #555;
-        }
-
-        .memo-list {
-            margin-top: 16px;
-        }
-
-        .memo-item {
-            background: #f8f9fa;
-            border: 1px solid #e0e0e0;
-            border-radius: 4px;
-            padding: 12px;
-            margin-bottom: 8px;
-        }
-
-        .memo-content {
-            font-size: 14px;
-            color: #333;
-            margin-bottom: 8px;
-        }
-
-        .memo-date {
-            font-size: 12px;
-            color: #666;
-            margin-bottom: 8px;
-        }
-
-        .memo-actions {
-            display: flex;
-            gap: 8px;
-        }
-
-        .edit-btn,
-        .delete-btn {
-            background: white;
-            border: 1px solid #dc3545;
-            color: #dc3545;
-            padding: 4px 8px;
-            border-radius: 4px;
-            font-size: 12px;
-            cursor: pointer;
-        }
-
-        .edit-btn {
-            background: rgba(147, 203, 255, 1);
-            color: #fff;
-            border: none;
-        }
-
-        .memo-date-separator {
-            font-size: 12px;
-            color: #666;
-            margin: 16px 0 8px 0;
-        }
-
-        .modal-actions {
-            display: flex;
-            justify-content: flex-end;
-            gap: 12px;
-            margin-top: 24px;
-            padding-top: 20px;
-            border-top: 1px solid #e0e0e0;
-        }
-
-        .close-btn {
-            background: white;
-            border: 1px solid #ccc;
-            color: #333;
-            padding: 10px 20px;
-            border-radius: 4px;
-            font-size: 14px;
-            cursor: pointer;
-            position: static;
-        }
-
-        .close-btn:hover {
-            background: #f5f5f5;
-        }
-
-        .save-btn {
-            background: #333;
-            color: white;
-            border: none;
-            padding: 10px 20px;
-            border-radius: 4px;
-            font-size: 14px;
-            cursor: pointer;
-        }
-
-        .save-btn:hover {
-            background: #555;
-        }
-
-        /* 모달 열기 버튼 */
-        .open-lead-modal {
-            background: #007bff;
-            color: white;
-            border: none;
-            padding: 8px 16px;
-            border-radius: 4px;
-            font-size: 14px;
-            cursor: pointer;
-            margin-left: 10px;
-        }
-
-        .open-lead-modal:hover {
-            background: #0056b3;
-        }
-    </style>
-
-    <script>
-        // 모달 열기/닫기 기능
-        document.addEventListener('DOMContentLoaded', function () {
-            const modal = document.getElementById('leadManagementModal');
-            const openModalBtn = document.createElement('button');
-            openModalBtn.className = 'open-lead-modal';
-            openModalBtn.textContent = '리드 관리';
-
-            // 글쓰기 버튼 옆에 리드 관리 버튼 추가
-            const actionFab = document.querySelector('.action-fab.v2');
-            if (actionFab) {
-                actionFab.appendChild(openModalBtn);
-            }
-
-            // 모달 열기
-            openModalBtn.addEventListener('click', function () {
-                modal.classList.add('show');
-            });
-
-            // 모달 닫기
-            const closeBtn = modal.querySelector('.close-btn');
-            closeBtn.addEventListener('click', function () {
-                modal.classList.remove('show');
-            });
-
-            // 배경 클릭 시 모달 닫기
-            modal.addEventListener('click', function (e) {
-                if (e.target === modal) {
-                    modal.classList.remove('show');
-                }
-            });
-
-            // ESC 키로 모달 닫기
-            document.addEventListener('keydown', function (e) {
-                if (e.key === 'Escape') {
-                    modal.classList.remove('show');
-                }
-            });
-        });
-    </script>
+		.form-group textarea {
+			height: 6rem;
+		}
 
 
-    <script type="module" src="./js/main.js"></script>
+		.form-group input:focus,
+		.form-group select:focus,
+		.form-group textarea:focus {
+			outline: none;
+			border-color: #007bff;
+		}
+
+		.form-group textarea {
+			resize: vertical;
+			min-height: 80px;
+		}
+
+		.memo-section {
+			margin-top: 20px;
+		}
+
+		.memo-section textarea {
+			height: 6rem;
+		}
+
+		.memo-input-area {
+			display: flex;
+			gap: 12px;
+			align-items: flex-start;
+		}
+
+		.memo-input-area textarea {
+			flex: 1;
+			min-height: 80px;
+		}
+
+		.add-memo-btn {
+			background: #333;
+			color: white;
+			border: none;
+			padding: 12px 16px;
+			border-radius: 4px;
+			font-size: 14px;
+			cursor: pointer;
+			white-space: nowrap;
+		}
+
+		.add-memo-btn:hover {
+			background: #555;
+		}
+
+		.memo-list {
+			margin-top: 16px;
+		}
+
+		.memo-item {
+			background: #f8f9fa;
+			border: 1px solid #e0e0e0;
+			border-radius: 4px;
+			padding: 12px;
+			margin-bottom: 8px;
+		}
+
+		.memo-content {
+			font-size: 14px;
+			color: #333;
+			margin-bottom: 8px;
+		}
+
+		.memo-date {
+			font-size: 12px;
+			color: #666;
+			margin-bottom: 8px;
+		}
+
+		.memo-actions {
+			display: flex;
+			gap: 8px;
+		}
+
+		.edit-btn,
+		.delete-btn {
+			background: white;
+			border: 1px solid #dc3545;
+			color: #dc3545;
+			padding: 4px 8px;
+			border-radius: 4px;
+			font-size: 12px;
+			cursor: pointer;
+		}
+
+		.edit-btn {
+			background: rgba(147, 203, 255, 1);
+			color: #fff;
+			border: none;
+		}
+
+		.memo-date-separator {
+			font-size: 12px;
+			color: #666;
+			margin: 16px 0 8px 0;
+		}
+
+		.modal-actions {
+			display: flex;
+			justify-content: flex-end;
+			gap: 12px;
+			margin-top: 24px;
+			padding-top: 20px;
+			border-top: 1px solid #e0e0e0;
+		}
+
+		.close-btn {
+			background: white;
+			border: 1px solid #ccc;
+			color: #333;
+			padding: 10px 20px;
+			border-radius: 4px;
+			font-size: 14px;
+			cursor: pointer;
+			position: static;
+		}
+
+		.close-btn:hover {
+			background: #f5f5f5;
+		}
+
+		.save-btn {
+			background: #333;
+			color: white;
+			border: none;
+			padding: 10px 20px;
+			border-radius: 4px;
+			font-size: 14px;
+			cursor: pointer;
+		}
+
+		.save-btn:hover {
+			background: #555;
+		}
+
+		/* 모달 열기 버튼 */
+		.open-lead-modal {
+			background: #007bff;
+			color: white;
+			border: none;
+			padding: 8px 16px;
+			border-radius: 4px;
+			font-size: 14px;
+			cursor: pointer;
+			margin-left: 10px;
+		}
+
+		.open-lead-modal:hover {
+			background: #0056b3;
+		}
+	</style>
+
+	<script>
+		// 모달 열기/닫기 기능
+		document.addEventListener('DOMContentLoaded', function () {
+			const modal = document.getElementById('leadManagementModal');
+			const openModalBtn = document.querySelector('.openModalBtn');
+
+
+			// 모달 열기
+			openModalBtn.addEventListener('click', function () {
+				modal.classList.add('show');
+			});
+
+			// 모달 닫기
+			const closeBtn = modal.querySelector('.close-btn');
+			closeBtn.addEventListener('click', function () {
+				modal.classList.remove('show');
+			});
+
+			// 배경 클릭 시 모달 닫기
+			modal.addEventListener('click', function (e) {
+				if (e.target === modal) {
+					modal.classList.remove('show');
+				}
+			});
+
+			// ESC 키로 모달 닫기
+			document.addEventListener('keydown', function (e) {
+				if (e.key === 'Escape') {
+					modal.classList.remove('show');
+				}
+			});
+		});
+	</script>
+
+
+	<script type="module" src="./js/main.js"></script>
 </body>
 
 </html>
